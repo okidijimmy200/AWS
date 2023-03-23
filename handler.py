@@ -3,6 +3,7 @@ import requests
 import re 
 from selenium import webdriver 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from urllib.error import URLError, HTTPError
 
@@ -54,7 +55,7 @@ def list_all_urls(results):
 def twitter_company_search(results):
     '''function to search for company details on twitter'''
 
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.implicitly_wait(10)
 
     for result in results:
