@@ -26,3 +26,4 @@ trio-websocket==0.9.2
 urllib3==1.26.7
 wsproto==1.0.0
 pytest
+webdriver-manager
