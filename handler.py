@@ -82,7 +82,7 @@ def twitter_company_search(results):
 def email_search(links):
     '''search company homepage for email'''
     url = links
-    driver = webdriver.Chrome('/home/jimmy/NickSon/test webscrapp/chromedriver')
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get(url)
 
     elems = driver.find_elements_by_xpath("//a[@href]")
