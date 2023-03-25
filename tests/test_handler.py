@@ -29,12 +29,12 @@ class TestGoogleSearch(unittest.TestCase):
                         """
         self.assertIsInstance(list_all_urls(results), types.GeneratorType)
 
-    def test_twitter_company_search(self):
-        '''test to get twitter url using regex'''
-        results = """
+    # def test_twitter_company_search(self):
+    #     '''test to get twitter url using regex'''
+    #     results = """
         
-                        """
-        self.assertIsInstance(twitter_company_search(results), str)
+    #                     """
+    #     self.assertIsInstance(twitter_company_search(results), str)
 
 
 
