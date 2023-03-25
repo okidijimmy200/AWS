@@ -7,7 +7,9 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from urllib.error import URLError, HTTPError
 import os
-dirname = os.path.dirname(__file__)
+
+
+chrome_driver = os.path.abspath("chromedriver")
 
 
 headers_Get = {
@@ -58,7 +60,7 @@ def list_all_urls(results):
 def twitter_company_search(results):
     '''function to search for company details on twitter'''
 
-    driver = webdriver.Chrome(os.path.abspath("chromedriver"))
+    driver = webdriver.Chrome(chrome_driver)
     driver.implicitly_wait(10)
 
     for result in results:
@@ -86,7 +88,7 @@ def email_search(links):
     '''search company homepage for email'''
     url = links
     # driver = webdriver.Chrome('/home/jimmy/NickSon/test webscrapp/chromedriver')
-    driver = webdriver.Chrome(os.path.abspath("chromedriver"))
+    driver = webdriver.Chrome(chrome_driver)
     driver.get(url)
 
     elems = driver.find_elements_by_xpath("//a[@href]")
