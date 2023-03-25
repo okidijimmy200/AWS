@@ -58,7 +58,7 @@ def list_all_urls(results):
 def twitter_company_search(results):
     '''function to search for company details on twitter'''
 
-    driver = webdriver.Chrome(os.path.abspath("/chromedriver"))
+    driver = webdriver.Chrome(os.path.abspath("chromedriver"))
     driver.implicitly_wait(10)
 
     for result in results:
@@ -86,7 +86,7 @@ def email_search(links):
     '''search company homepage for email'''
     url = links
     # driver = webdriver.Chrome('/home/jimmy/NickSon/test webscrapp/chromedriver')
-    driver = webdriver.Chrome(os.path.abspath("/chromedriver"))
+    driver = webdriver.Chrome(os.path.abspath("chromedriver"))
     driver.get(url)
 
     elems = driver.find_elements_by_xpath("//a[@href]")
