@@ -58,7 +58,7 @@ def list_all_urls(results):
 def twitter_company_search(results):
     '''function to search for company details on twitter'''
 
-    driver = webdriver.Chrome(driver = webdriver.Chrome(os.path.join(dirname, '/chromedriver')))
+    driver = webdriver.Chrome(os.path.join(dirname, '/chromedriver'))
     driver.implicitly_wait(10)
 
     for result in results:
