@@ -27,7 +27,7 @@ def google_search(q):
         print(f'This company does not exist: {err}')
     else:
         return url
-'''scrap company here '''
+'''scrap company here there '''
 def scrap_company(url):
     '''scrap google search page for company results'''
     try:
